@@ -1,0 +1,600 @@
+@charset "UTF-8";
+/*
+モジュール
+*/
+/*
+リセットCSS等の基本設定
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+blockquote, code,
+ol, ul, li, dl, dt, dd,
+div, section, article, main, aside,
+nav, header, footer,
+img, figure, figcaption,
+address, time, audio, video,
+iframe, fieldset,
+form, label, table, caption,
+tbody, tfoot, thead,
+tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+article, aside, footer, header, nav, section, main {
+  display: block;
+}
+
+li, ol {
+  list-style: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid #3F51B5;
+}
+
+th, td {
+  padding: 4px 6px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #3F51B5;
+}
+
+input, textarea {
+  padding: 8px;
+  border: 1px solid #3F51B5;
+  border-radius: 0;
+  background-image: none;
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-appearance: none;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border: 1px solid #3F51B5;
+  box-shadow: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  border: none;
+}
+input[type="submit"]:hover, input[type="submit"]:focus {
+  outline: none;
+  border: none;
+}
+input[type="submit"] ::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + span {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 1.2em;
+  margin: 0 0.2em 0;
+  cursor: pointer;
+}
+input[type="radio"] + span::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #3F51B5;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+input[type="radio"] + span::after {
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
+}
+input[type="radio"] + span:focus, input[type="radio"] + span:checked {
+  outline: none;
+  border: 1px solid #fff;
+  box-shadow: none;
+  background: #3F51B5;
+}
+input[type="radio"]:checked + span::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0.2em;
+  transform: translateY(-50%);
+  background: #3F51B5;
+  border-radius: 50%;
+  width: 0.6em;
+  height: 0.6em;
+  display: block;
+  opacity: 1;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + span {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 1.2em;
+  margin: 0 0.2em 0;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+input[type="checkbox"] + span::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #3F51B5;
+  border-radius: 2px;
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+input[type="checkbox"] + span::after {
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
+}
+input[type="checkbox"]:checked + span::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(-45deg);
+  width: 1em;
+  height: 0.6em;
+  margin-top: -0.2em;
+  display: block;
+  border-left: 3px solid #3F51B5;
+  border-bottom: 3px solid #3F51B5;
+  opacity: 1;
+}
+
+select {
+  width: 100%;
+  padding: 8px 24px 8px 8px;
+  border-radius: 0;
+  background-image: none;
+  border: 1px solid #3F51B5;
+  font-family: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+select:focus {
+  outline: none;
+  border: 1px solid #3F51B5;
+  box-shadow: none;
+}
+
+.hidden {
+  display: none;
+}
+.inner {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 700px;
+}
+
+@media (min-width: 991px) {
+  .inner{
+    max-width: 1000px;
+  }
+}
+.wrapper {
+  overflow: hidden;
+}
+img {
+  width: 100%;
+}
+/*header
+============================ */
+header{
+  padding-top: 30px;
+  margin-bottom: 50px;
+  background-color: #fff;
+}
+header .inner{
+  position: relative;
+  text-align: center;
+}
+h1{
+  padding-bottom: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: dashed 3px #e8ae56;
+}
+h1 span{
+  font-size: 20px;
+}
+.bakuhatsu-img{
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+}
+@media (max-width: 768px) {
+  h1 span{
+    font-size: 16px;
+  }
+  h1{
+    font-size: 22px;
+  }
+  header .left{
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 150px);
+    width: 60px;
+  }
+  header .right{
+    position: absolute;
+    top: -10px;
+    right: calc(50% - 150px);
+    width: 60px;
+  }
+}
+/* main_index
+=========================== */
+#main_index .mainVisual{
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 80%;
+  max-width: 500px;
+}
+.indexBtn{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 300px;
+  background-color: #e8ae56;
+  border-bottom: solid 3px #c88e36;/*ボタン色より暗めに*/
+  border-right: solid 3px #c88e36;/*ボタン色より暗めに*/
+  display: block !important;
+  text-align: center;
+}
+.indexBtn a,.degree1 a{
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* main_original
+========================== */
+input{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+}
+input[type="submit"]{
+  display: block;
+  width: 300px;
+  border-bottom: solid 3px #c88e36;
+  border-right: solid 3px #c88e36;
+}
+
+form h2,form p{
+  margin: 0 auto;
+  max-width: 300px;
+}
+form h2{
+  margin-bottom: 20px;
+}
+.number1{
+  margin-bottom: 50px;
+}
+.number2{
+  margin-bottom: 60px;
+}
+
+#main_original .subBtn{
+  display: block;
+  width: 70px;
+  margin: 0 0 0 auto;
+}
+.note{
+  margin-top: 100px;
+}
+.note h2{
+  margin-bottom: 10px;
+}
+.note p{
+  margin-bottom: 30px;
+}
+/* main_gameboard
+========================== */
+
+.mainHeader{
+  display: flex;
+  margin-bottom: 20px;
+  text-align: right;
+}
+#timer{
+  padding-top: 10px;
+  flex: 0 0 auto;
+  font-size: 26px;
+  font-weight: bold;
+}
+#selectBtnArea{
+  flex: 1 1 auto;
+}
+#flagBtn{
+  padding: 0.9em 0.9em;
+  background-color: #e8ae56;
+  border-bottom: solid 3px #c88e36;/*ボタン色より暗めに*/
+  border-right: solid 3px #c88e36;/*ボタン色より暗めに*/
+}
+.otherBtn{
+  padding: 0.9em 0.9em;
+}
+.selectBtn {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #FFF;
+  font-weight: bold;
+  background-color: #e8ae56;
+  border-bottom: solid 3px #c88e36;/*ボタン色より暗めに*/
+  border-right: solid 3px #c88e36;/*ボタン色より暗めに*/
+}
+.selectBtn a{
+  padding: 0.9em 0.9em;
+  display: block;
+  color: #fff;
+}
+.selectBtn:before {
+  content: " ";
+  position: absolute;
+  bottom: -5px;
+  left: -1px;
+  width: 0;
+  height: 0;
+  border-width: 0 3px 3px 0px;
+  border-style: solid;
+  border-color: transparent;
+}
+.selectBtn:after {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  right: -5px;
+  width: 0;
+  height: 0;
+  border-width: 0px 6px 6px 0px;
+  border-style: solid;
+  border-bottom-color: transparent;
+}
+.selectBtn:active {
+  /*ボタンを押したとき*/
+  border:none;
+  -webkit-transform: translate(3px,3px);
+  transform: translate(3px,3px);
+}
+.selectBtn:active:after, .selectBtn:active:before {
+  content: none;/*ボタンを押すと線が消える*/
+}
+
+.subBtn{
+  background-color: #8777f2;
+  border-bottom: solid 3px #6757b2;/*ボタン色より暗めに*/
+  border-right: solid 3px #6757b2;/*ボタン色より暗めに*/
+}
+
+/* bordArea========== */
+#boardArea{
+  margin-bottom: 20px;
+}
+#board{
+  position: relative;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 2px solid #333;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cover{
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,.4);
+  z-index: 2;
+}
+.trout{
+  flex: 0 0 auto;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid #ddd;
+}
+
+.game{
+  margin: auto;
+  position: absolute;
+  top: 35%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 600px;
+  z-index: 5;
+  display: none;
+  text-align: center;
+}
+.clear{
+  margin: auto;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 600px;
+  z-index: 5;
+  display: none;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .clear{
+    width: 80%;
+    top: 5%;
+    font-size: 16px;
+  }
+}
+#twitter {
+}
+#twitter a {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  background-color: #3D97F1;
+  margin: 50px auto;
+  padding: 15px 20px;
+  border-radius: 50%;
+  display: block;
+  width: 80px;
+  height: 80px;
+  font-size: 30px;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  #twitter{
+    margin: 20px auto;
+  }
+}
+#shareTxt{
+  font-weight: bold;
+}
+svg{
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+@media (max-width: 768px) {
+  svg{
+    width: 80%;
+  }
+}
+
+.svgAction path {
+  fill: none;
+  stroke: #000; /*線の色を指定する*/
+  stroke-dasharray: 1300;/*線の間隔を指定する*/
+  stroke-dashoffset: 0;/*線の位置を指定する */
+  stroke-width: 5;/*線の太さを指定する*/
+  animation: anime 1s ease-in forwards;
+}
+
+@keyframes anime {
+  0% {
+    stroke-dashoffset: 1300;
+    fill:transparent; /*透過*/
+  }
+  50% {stroke-dashoffset: 500;}
+  55% {stroke-dashoffset: 450;}
+  60% {stroke-dashoffset: 410;}
+  65% {stroke-dashoffset: 380;}
+  70% {stroke-dashoffset: 360;}
+  80% {fill: red;}
+  95% {stroke-dashoffset: 0;}
+  100% {fill: red;}
+}
+/* howTo==================== */
+#howTo{
+  margin-bottom: 50px;
+}
+
+/* その他css================ */
+.close{
+  background-color: #7bed87;
+}
+.open{
+  background-color: #7ddef7;
+}
+.bomb{
+  background: url('../images/bomb.png') center center/cover no-repeat;
+  background-color: rgb(246, 104, 79);
+}
+.explosion{
+  background: url('../images/bakuhatsu.png') center center/cover no-repeat;
+  background-color: rgb(246, 104, 79);
+}
+.flag{
+  padding: 10px;
+  background: url('../images/flag.png') center center/cover no-repeat;
+  background-color: #d54280;
+}
+.active{
+  background-color: #d54280 !important;
+  border-bottom: solid 3px #b52269 !important;/*ボタン色より暗めに*/
+  border-right: solid 3px #b52269 !important;/*ボタン色より暗めに*/
+}
+.show{
+  display: block;
+}
+/* footer
+=============================*/
+footer{
+  margin-top: 100px;
+  background-color: #e8ae56;
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.developer{
+  color: #000;
+}
+.developer a{
+  color: skyblue;
+}

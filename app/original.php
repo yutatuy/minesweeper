@@ -9,7 +9,7 @@
   <meta name="keywords" content="マインスイーパー">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="作って遊ぼう！君だけのマインスイーパー！" />
-  <meta property="og:image" content="./images/ogp_large.png" />
+  <meta property="og:image" content="<?php echo (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] ?>/images/ogp_large.png" />
   <meta name="twitter:card" content="summary_large_image" />
  <!-- favicon -->
  <link rel="icon" type="image/vnd.microsoft.icon" href="./images/favicon.ico" />

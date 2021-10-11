@@ -54,7 +54,7 @@
     <!-- footer -->
     <footer class="footer">
       <div class="inner">
-        <p class="copy">&copy; 2019 MineSweeper by Yuta Ichinose</p>
+        <p class="copy">&copy; 2021 MineSweeper by Yuta Ichinose</p>
       </div>
     </footer><!-- /footer-->
 

@@ -43,7 +43,7 @@
           <input class="number2" type="number" name="bomb_number">
           <input class="otherBtn selectBtn" type="submit" onclick="return test()" value="スタート">
         </form>
-        <div class="selectBtn subBtn"><a href="./index.php">戻る</a></div>
+        <div class="selectBtn subBtn subBtn--long"><a href="./index.php">戻る</a></div>
         <div class="note">
           <h2>注意点</h2>
           <p>※行と列の数は1以上50以下で指定してください</p>

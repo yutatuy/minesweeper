@@ -7,7 +7,13 @@
   <title>作って遊ぼう！君だけのマインスイーパー！</title>
   <meta name="description" content="マインスイーパーは地雷を踏まないようにマスを開いていくゲームです。登録不要で誰でも無料で遊べます。マスの数、地雷の数を自由に設定できる機能もあるので、自分だけのマインスイーパーを作って友達と一緒に遊んでみよう。">
   <meta name="keywords" content="マインスイーパー">
-
+  <meta name="keywords" content="マインスイーパー">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="作って遊ぼう！君だけのマインスイーパー！" />
+  <meta property="og:image" content="./images/ogp_large.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+   <!-- favicon -->
+   <link rel="icon" type="image/vnd.microsoft.icon" href="./images/favicon.ico" />
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 

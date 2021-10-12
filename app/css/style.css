@@ -498,7 +498,7 @@ form h2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.7);
   z-index: 2;
 }
 .trout {
@@ -560,6 +560,9 @@ form h2 {
 @media (max-width: 768px) {
   #twitter {
     margin: 20px auto;
+  }
+  #twitter a {
+    margin: 30px auto;
   }
 }
 #shareTxt {

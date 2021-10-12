@@ -196,12 +196,14 @@ function troutClick() {
             "https://twitter.com/share?text=" +
             clearTxt +
             "&url=" +
-            "https://nose-free.com/minesweeper";
+            "http://web1.nosesite.mydns.jp";
           var twLink =
-            '<a href="' + twHref + '"><i class="fab fa-twitter"></i></a>';
+            '<a href="' +
+            twHref +
+            '" target="_blank"><i class="fab fa-twitter"></i></a>';
           document.getElementById("twitter").innerHTML = twLink;
           document.getElementById("shareTxt").innerHTML =
-            clearTxt + "<br><br>Twitterでシェアしてみよう！";
+            clearTxt + "<br>Twitterでシェアしてみよう！";
           //timerを止める
           stop();
         }
